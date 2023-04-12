@@ -1,0 +1,73 @@
+os.system('color a')
+print('+','='*60,'+')
+print("|            Selamat datang di BTS Ticket sell                 |")
+print('+','-'*60,'+')
+print("|            Halo ARMY!!! Silahkan masukkan data dirimu        |")
+print('+','='*60,'+')
+name = input("| Nama kamu : ")
+kota = input("| Kota anda : ")
+nomor= input("| Nomor Hp  : ")
+bias = input("| Bias kamu : ")
+saldo =int(input("| Masukkan saldo awal kamu: "))
+
+os.system('cls')
+def main():
+    global n
+    global saldo
+    global j
+    global nama
+    global jumlah
+    global total
+    global beli
+    print('+','='*55,'+')
+    print("|                  BTS YET TO COME TICKET SELL            |")
+    print('+','='*55,'+')
+    print("|            [1] Membeli tiket                            |")
+    print("|            [2] Melihat data diri                        |")
+    print("|            [3] Top up Saldo                             |")
+    print("|            [4] Stok Tiket                               |")
+    print("|            [5] Identitas pembuat program                |")
+    print("|            [6] Riwayat Pembayaran                       |")
+    print("|            [7] Keluar                                   |")
+    print('+','='*55,'+')
+    pilihan=input("Pilihan anda : ")
+    os.system('cls')
+    if pilihan =='1':
+        konser()
+                    
+             
+            
+        
+        
+        
+    if pilihan=='2':
+        print("Nama Kamu : "+name)
+        print("Kota kamu : "+kota)
+        print("Nomor HP  : "+nomor)
+        print("Bias Kamu : "+bias)
+        print("Saldo     : ",saldo)
+        l=input("Anda ingin kembali ke menu utama(y) atau keluar(t) : ")
+        if(l=="y" or l=="Y"):
+            os.system('cls')
+            main()
+        else :
+            os.system('cls')
+            print('+','='*60,'+')
+            print("|              Terimakasih telah mengunjungi kami !!           |")
+            print('+','='*60,'+')
+            exit()
+            
+            
+    if pilihan=='3':
+        yakin=input("Apakah kamu yakin ingin menambahkan saldo(y/t)")
+        jalan=True
+        while(jalan==True):
+            if yakin=='y'or yakin=='Y':
+                tambah=int(input("Berapa banyak saldo yang ingin kamu tambahkan : "))
+                saldo+=tambah
+                i=input("Apakah kamu ingin mengulang lagi ? : ")
+                if(i=='t'or i=='T'):
+                    os.system('cls')
+                    main()
+            else:
+                main()
