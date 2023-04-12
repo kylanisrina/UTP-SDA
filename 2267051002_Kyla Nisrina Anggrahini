@@ -1,0 +1,106 @@
+if pilihan=='4':
+        print('+','='*60,'+')
+        print("|                        DAFTAR ISI TIKET                      |")
+        print('+','='*60,'+')
+        print("| Nama Tiket : Vip                                             |")
+        print("| Stok Tiket :",stok[0],"                                           |")
+        print("| Harga Tiket:",harga[0],"                                        |")
+        print('+','='*60,'+')
+        print("| Nama Tiket : Platinum                                        |")
+        print("| Stok Tiket :",stok[1],"                                           |")
+        print("| Harga Tiket:",harga[1],"                                        |")
+        print('+','='*60,'+')
+        print("| Nama Tiket : Purple                                          |")
+        print("| Stok Tiket :",stok[2],"                                           |")
+        print("| Harga Tiket:",harga[2],"                                        |")
+        print('+','='*60,'+')
+        print("| Nama Tiket : Blue                                            |")
+        print("| Stok Tiket :",stok[3],"                                           |")
+        print("| Harga Tiket:",harga[3],"                                        |")
+        print('+','='*60,'+')
+        print("| Nama Tiket : Yellow                                          |")
+        print("| Stok Tiket :",stok[4],"                                           |")
+        print("| Harga Tiket:",harga[4],"                                        |")
+        print('+','='*60,'+')    
+        l=input("Anda ingin kembali ke menu utama(y) atau keluar(t) : ")
+        if(l=="y" or l=="Y"):
+            os.system('cls')
+            main()
+        else :
+            os.system('cls')
+            print('+','='*60,'+')
+            print("|              Terimakasih telah mengunjungi kami !!           |")
+            print('+','='*60,'+')
+            exit()
+    
+    
+    if pilihan=='5':
+        class identitas:
+            def _init_(self,nama,npm,kelas):
+                self.nama = nama
+                self.npm = npm
+                self.kelas= kelas
+                
+            
+            def infonama(self):
+                print('+','='*40,'+')
+                print("| Nama  :",self.nama)
+                print("| NPM   :",self.npm,"                      |")
+                print("| Kelas :",self.kelas)
+                print('+','='*40,'+')
+                
+            
+        pembuat1 = identitas("Moza Surya Putra                 |",2217051014,"A                                |" )
+        pembuat1.infonama()
+        pembuat2 = identitas("Dewi Intan Nabila                |",2217051045,"A                                |" )
+        pembuat2.infonama()
+        pembuat3 = identitas("Kyla Nisrina Anggrahini          |",2267051002,"A                                |" )
+        pembuat3.infonama()
+        l=input("Anda ingin kembali ke menu utama(y) atau keluar(t) : ")
+        if(l=="y" or l=="Y"):
+            os.system('cls')
+            main()
+        else :
+            os.system('cls')
+            print('+','='*60,'+')
+            print("|              Terimakasih telah mengunjungi kami !!           |")
+            print('+','='*60,'+')
+            exit()
+            
+    if pilihan=='6':
+        print('+','='*55,'+')
+        print("|                [RIWAYAT PEMBELIAN TIKET]                |\t")
+        print('+','='*55,'+')
+        if n < 2:
+            print(".......Tiket yang anda beli Kosong kaya hati lo.......")
+            main()
+        else:
+         for i, beli in enumerate(pembelian):
+            print("|[Pembelian ke {}]                     |".format(i+1))
+            print('+','='*55,'+')
+            print("|[Jenis Tiket] : {}                    |".format(beli['nama']))
+            print('+','='*55,'+')
+            print("|[Jumlah tiket] : {}                           |".format(beli['jumlah']))
+            print('+','='*55,'+')
+            print("|[Total Harga] : {}                    |".format(beli['total']))
+            print('+','='*55,'+')
+        
+        l=input("Anda ingin kembali ke menu utama(y) atau keluar(t) : ")
+        if(l=="y" or l=="Y"):
+            os.system('cls')
+            main()
+            
+        else :
+            os.system('cls')
+            print('+','='*60,'+')
+            print("|              Terimakasih telah mengunjungi kami !!           |")
+            print('+','='*60,'+')
+            exit()
+    
+    
+        
+    if pilihan=='7':
+        print("Terimakasih telah datang")
+        exit()    
+        
+main()
