@@ -1,0 +1,227 @@
+import os
+
+
+n=1
+stok=[1000,2000,3000,4000,5000]
+harga=(4500000,3500000,2500000,2000000,1500000)
+pembelian = []
+def konser():
+    global n
+    global saldo
+    global j
+    global nama
+    global jumlah
+    global total
+    global beli
+    os.system("color b")
+    print('+','='*50,'+')
+    print("|                [1] Vip                             |")
+    print("|                [2] Platinum                        |")
+    print("|                [3] Purple                          |")
+    print("|                [4] Blue                            |")
+    print("|                [5] Yellow                          |")
+    print("|                [6] Kembali ke menu utama           |")
+    print('+','='*50,'+')
+    boy=input("Tiket anda : ")
+    if boy=='1':
+        jalan=True
+        while(jalan==True):
+            nomor=1
+            jumlah=int(input("Masukkan jumlah : "))
+            total=harga[0]*jumlah
+            nama="Vip"
+           
+            if saldo>=total :
+                sisa=saldo-total
+                saldo=sisa
+                sitok=stok[0]-jumlah
+                stok[0]=sitok
+                n+=1
+                print("Pembayaran anda adalah Rp.",total)
+                pembelian.append({"nama":nama,"jumlah":jumlah,"total":total})
+                kembali=input("Apakah anda ingin membeli tiket vip lagi ?")
+                if(kembali=='t' or kembali=='T'):
+                    os.system('cls')
+                    konser()
+                    
+            elif saldo<total :
+                kurang=input("Saldo kamu kurang, Apakah kamu ingin kembali ke menu utama untuk menambah saldo (y) atau keluar dari aplikasi(t) : ")
+                if kurang=='y' or 'Y' :
+                    os.system('cls')
+                    main()
+                else:
+                    print('+','='*60,'+')
+                    print("|              Terimakasih telah mengunjungi kami !!           |")
+                    print('+','='*60,'+')
+            elif stok[0]<jumlah:
+                back=input("Stok sudah habis, apakah kamu ingin kembali ke menu utama(y) atau keluar dari aplikasi(t) : ")
+                if kurang=='y' or 'Y' :
+                    os.system('cls')
+                    main()
+                else:
+                    print('+','='*60,'+')
+                    print("|              Terimakasih telah mengunjungi kami !!           |")
+                    print('+','='*60,'+')
+                
+    if boy=='2':
+        jalan=True
+        while(jalan==True):
+            nomor=2
+            nama="Platinum"
+            jumlah=int(input("Masukkan jumlah : "))
+            total=harga[1]*jumlah
+           
+            if saldo>=total :
+                sisa=saldo-total
+                saldo=sisa
+                sitok=stok[1]-jumlah
+                stok[1]=sitok
+                n+=1
+                print("Pembayaran anda adalah Rp.",total)
+                pembelian.append({"nama":nama,"jumlah":jumlah,"total":total})
+                kembali=input("Apakah anda ingin membeli tiket platinum lagi ?")
+                if(kembali=='t' or kembali=='T'):
+                    os.system('cls')
+                    konser()
+            
+            
+            
+            
+            
+            elif saldo<total :
+                kurang=input("Saldo kamu kurang, Apakah kamu ingin kembali ke menu utama untuk menambah saldo (y) atau keluar dari aplikasi(t) : ")
+                if kurang=='y' or 'Y' :
+                    os.system('cls')
+                    main()
+                else:
+                    print('+','='*60,'+')
+                    print("|              Terimakasih telah mengunjungi kami !!           |")
+                    print('+','='*60,'+')
+            elif stok[1]<jumlah:
+                back=input("Stok sudah habis, apakah kamu ingin kembali ke menu utama(y) atau keluar dari aplikasi(t) : ")
+                if kurang=='y' or 'Y' :
+                    os.system('cls')
+                    main()
+                else:
+                    print('+','='*60,'+')
+                    print("|              Terimakasih telah mengunjungi kami !!           |")
+                    print('+','='*60,'+')                   
+    if boy=='3':
+        jalan=True
+        while(jalan==True):
+            nomor=3
+            nama="Purple"
+            jumlah=int(input("Masukkan jumlah : "))
+            total=harga[2]*jumlah
+            
+            if saldo>=total :
+                sisa=saldo-total
+                saldo=sisa
+                sitok=stok[2]-jumlah
+                stok[2]=sitok
+                n+=1
+                print("Pembayaran anda adalah Rp.",total)
+                pembelian.append({"nama":nama,"jumlah":jumlah,"total":total})
+                kembali=input("Apakah anda ingin membeli tiket Purple lagi ?")
+                if(kembali=='t' or kembali=='T'):
+                    os.system('cls')
+                    konser()
+                    
+            elif saldo<total :
+                kurang=input("Saldo kamu kurang, Apakah kamu ingin kembali ke menu utama untuk menambah saldo (y) atau keluar dari aplikasi(t) : ")
+                if kurang=='y' or 'Y' :
+                    os.system('cls')
+                    main()
+                else:
+                    print('+','='*60,'+')
+                    print("|              Terimakasih telah mengunjungi kami !!           |")
+                    print('+','='*60,'+')
+            elif stok[2]<jumlah:
+                back=input("Stok sudah habis, apakah kamu ingin kembali ke menu utama(y) atau keluar dari aplikasi(t) : ")
+                if kurang=='y' or 'Y' :
+                    os.system('cls')
+                    main()
+                else:
+                    print('+','='*60,'+')
+                    print("|              Terimakasih telah mengunjungi kami !!           |")
+                    print('+','='*60,'+')              
+    if boy=='4':
+        jalan=True
+        while(jalan==True):
+            nomor=4
+            nama="Blue"
+            jumlah=int(input("Masukkan jumlah : "))
+            total=harga[3]*jumlah
+            
+            if saldo>=total :
+                sisa=saldo-total
+                saldo=sisa
+                sitok=stok[3]-jumlah
+                stok[3]=sitok
+                n+=1
+                print("Pembayaran anda adalah Rp.",total)
+                pembelian.append({"nama":nama,"jumlah":jumlah,"total":total})
+                kembali=input("Apakah anda ingin membeli tiket Blue lagi ?")
+                if(kembali=='t' or kembali=='T'):
+                    os.system('cls')
+                    konser()
+                    
+            elif saldo<total :
+                kurang=input("Saldo kamu kurang, Apakah kamu ingin kembali ke menu utama untuk menambah saldo (y) atau keluar dari aplikasi(t) : ")
+                if kurang=='y' or 'Y' :
+                    os.system('cls')
+                    main()
+                else:
+                    print("Terima kasih sudah mengunjungi kami")
+            elif stok[3]<jumlah:
+                back=input("Stok sudah habis, apakah kamu ingin kembali ke menu utama(y) atau keluar dari aplikasi(t) : ")
+                if kurang=='y' or 'Y' :
+                    os.system('cls')
+                    main()
+                else:
+                    print('+','='*60,'+')
+                    print("|              Terimakasih telah mengunjungi kami !!           |")
+                    print('+','='*60,'+')
+    if boy=='5':
+        jalan=True
+        while(jalan==True):
+            nomor=1
+            nama="Yellow"
+            jumlah=int(input("Masukkan jumlah : "))
+            total=harga[4]*jumlah
+            
+            if saldo>=total :
+                sisa=saldo-total
+                saldo=sisa
+                sitok=stok[4]-jumlah
+                stok[4]=sitok
+                n+=1
+                print("Pembayaran anda adalah Rp.",total)
+                pembelian.append({"nama":nama,"jumlah":jumlah,"total":total})
+                kembali=input("Apakah anda ingin membeli tiket yellow lagi ?")
+                if(kembali=='t' or kembali=='T'):
+                    os.system('cls')
+                    konser()
+                    
+            elif saldo<total :
+                kurang=input("Saldo kamu kurang, Apakah kamu ingin kembali ke menu utama untuk menambah saldo (y) atau keluar dari aplikasi(t) : ")
+                if kurang=='y' or 'Y' :
+                    os.system('cls')
+                    main()
+                else:
+                    print('+','='*55,'+')
+                    print("|            Terimakasih telah mengunjungi kami !!           |")
+                    print('+','='*55,'+')
+            elif stok[4]<jumlah:
+                back=input("Stok sudah habis, apakah kamu ingin kembali ke menu utama(y) atau keluar dari aplikasi(t) : ")
+                if kurang=='y' or 'Y' :
+                    os.system('cls')
+                    main()
+                else:
+                    print('+','='*60,'+')
+                    print("|              Terimakasih telah mengunjungi kami !!           |")
+                    print('+','='*60,'+')                   
+    
+    if boy=='6':
+        os.system('cls')
+        main()   
